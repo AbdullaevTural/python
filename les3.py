@@ -72,14 +72,14 @@ def get_numb(n):
     for s in range(-n,n+1):
         coun[s] = count[s-2]
     print('Изначальный список:', count)
-    print('Изначальный список:', coun)   
+    print('Измененный список на 2 позиции вправо:', coun)   
 get_numb(N)
 
 ## 2 Вариант
 
 def main():
     task = []
-    number = int(input('Сколько будет задач: '))
+    number = int(input('Введите число: '))
     for s in range(-number,number+1):
         task.append(s)
     print('Изначальный список:', task)
