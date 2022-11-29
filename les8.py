@@ -1,4 +1,5 @@
 from random import randint
+
 # ## Задача 1. В каждой группе учится от 20 до 30 студентов. По итогам экзамена все оценки заносятся в таблицу. Каждой группе отведена своя строка. Определите группу с наилучшим средним баллом.
 
 
@@ -53,7 +54,7 @@ from random import randint
 #     if sum_in_rows[i] > sum_dia:
 #         print(f'в строке {i+1} сумма больше,  чем сумма эл. диагонали')
 
-size = int(input('Введите количество строк'))
+size = int(input('Введите количество строк '))
 period = 2
 matrix = [0] * size
 for i in range(size):
@@ -77,11 +78,13 @@ max_el = max(mean_temp)
 index_max_el = mean_temp.index(max_el)
 
 print(max_el)
-print(index_max_el+1)
+print(index_max_el)
 
 for row_matrix in matrix:
-    if len (row_matrix) <index_max_el:
-        print(f"максимальный элемент в строке {row_matrix} равен {row_matrix[index_max_el]}")
+    if len(row_matrix) > index_max_el:
+        print(f"максимальный элемент в строке {row_matrix} равен {row_matrix[index_max_el]}, {index_max_el}")
+
+        break
     else:
-        index_max_el
+        index_max_el -= len(row_matrix)
     
